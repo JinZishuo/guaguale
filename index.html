@@ -38,11 +38,11 @@
  <body>
  <!-- 大的背景盒子-->
  <div id="main">
+	 <div style="font-size:50px;color:#ff9036;text-align: center;">刮刮乐<div>
   <!-- 定位的盒子-->
   <div class="canvasBox">
   <!-- 放内容的盒子-->
   <span id="prize">
-   恭喜发财，红包拿来
   </span>
   <!-- 蒙版画布-->
   <canvas id="canvas"></canvas>
@@ -50,6 +50,21 @@
  </div>
  </body>
  <script type="text/javascript">
+	  //获取对象
+	  var textArr = ["可乐一瓶", "薯片一包", "棒棒糖一根", "谢谢惠顾", "再来一次"];
+	  var prize = document.getElementById("prize");
+	  var num = Math.random() * 100;
+	  if (num <= 60) {
+	  prize.innerText = textArr[3];
+	  } else if (num <= 70) {
+	  prize.innerText = textArr[4];
+	  } else if (num <= 80) {
+	  prize.innerText = textArr[2];
+	  } else if (num <= 90) {
+	  prize.innerText = textArr[1];
+	  } else if (num <= 100) {
+	  prize.innerText = textArr[0];
+	  }
  var canvas = document.getElementById("canvas");
  var ctx = canvas.getContext('2d');
  /* 画布偏移量，下面用到的时候再介绍*/
