@@ -81,7 +81,7 @@ margin-top:5%;
  cxt.fillText(txt, 150, 50, 300);
  var mX, mY;
  var flag = false;
- myCanvas.onmousedown = function(e) {
+ myCanvas.onmouseenter = function(e) {
  flag = true;
  mX = e.offsetX;
  mY = e.offsetY;
@@ -95,6 +95,7 @@ margin-top:5%;
  }
  }
  document.body.onmouseup = function() {
+ flag = false;
  sayPrize();
  }
 
